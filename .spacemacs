@@ -593,3 +593,9 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  )
 )
+
+;; Custom shortcuts
+(global-set-key (kbd "C-x i") (lambda ()
+                                (interactive)
+                                (other-window -1)))
+
