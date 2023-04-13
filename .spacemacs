@@ -179,7 +179,8 @@ It should only modify the values of Spacemacs settings."
    ;; directory. A string value must be a path to an image format supported
    ;; by your Emacs build.
    ;; If the value is nil then no banner is displayed. (default 'official)
-   dotspacemacs-startup-banner 'official
+;;   dotspacemacs-startup-banner 'official
+   dotspacemacs-startup-banner nil
 
    ;; Scale factor controls the scaling (size) of the startup banner. Default
    ;; value is `auto' for scaling the logo automatically to fit all buffer
@@ -234,6 +235,7 @@ It should only modify the values of Spacemacs settings."
    ;; Initial message in the scratch buffer, such as "Welcome to Spacemacs!"
    ;; (default nil)
    dotspacemacs-initial-scratch-message nil
+
 
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
@@ -421,7 +423,7 @@ It should only modify the values of Spacemacs settings."
    ;;   :size-limit-kb 1000)
    ;; When used in a plist, `visual' takes precedence over `relative'.
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers t
 
    ;; Code folding method. Possible values are `evil', `origami' and `vimish'.
    ;; (default 'evil)
@@ -580,6 +582,9 @@ This is an auto-generated function, do not modify its content directly, use
 Emacs customize menu instead.
 This function is called at the very end of Spacemacs initialization."
 (custom-set-variables
+ ;; Disable finge
+ '(global-vi-tilde-fringe-mode nil)
+
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
@@ -607,11 +612,11 @@ This function is called at the very end of Spacemacs initialization."
 
 
 ;; Custom colors for eshell
-(setq eshell-prompt-function (lambda nil
-                               (concat
-                                (propertize (eshell/pwd) 'face `(:foreground "#03b6fc"))
-                                (propertize " $ " 'face `(:foreground "#db03fc")))))
-(setq eshell-highlight-prompt nil)
+;;(setq eshell-prompt-function (lambda nil
+;;                               (concat
+;;                                (propertize (eshell/pwd) 'face `(:foreground "#03b6fc"))
+;;                                (propertize " $ " 'face `(:foreground "#db03fc")))))
+;;(setq eshell-highlight-prompt nil)
 
 
 ;; Always forllow the symlink
